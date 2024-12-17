@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(71, 71, 71);
+}
+
+.background_image {
+    width: 100vw;
+    height: 100vh; 
+    object-fit: cover; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: -1; 
+    transition: opacity 0.5s ease;
+}
+
+
+.btn1 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(248, 248, 64);
+    transition: opacity 1s;
+    font-weight: bold;
+    font-size: larger;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn1:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+    opacity: 80%;
+}
+
+.btn2 {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translateX(-50%);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    border-color: white;
+    border-style: solid;
+    background-color: rgb(253, 0, 55);
+    transition: 1s;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    font-size: x-large;
+}
+
+.btn2:hover {
+    transition: 1s;
+    background-color: white;
+    border-color: rgb(253, 0, 55);
+    color: rgb(253, 0, 55);
+}
+
+.random {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(128, 236, 255);
+    color: rgb(0, 0, 0);
+    opacity: 60%;
+    border: none;
+    border-radius: 10px;
+    transition: all 1s;
+    cursor: pointer;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.random:after {
+    content: '39£ get premium\a to access all\a the features';
+    position: absolute;
+    opacity: 0;
+    white-space: pre;
+    font-size: x-large;
+    font-weight: bold;
+    font-style: oblique;
+    text-align: center;
+    transition: 1s;
+}
+
+.random:hover::after {
+    opacity: 1;
+}
+
+.random:hover {
+    padding-right: 200px;
+    padding-bottom: 85px;
+}
+
+.btn3 {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translateX(-50%);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    border-color: white;
+    border-style: solid;
+    background-color: rgb(253, 0, 55);
+    transition: 1s;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    font-size: x-large;
+}
+
+.btn3:hover {
+    transition: 1s;
+    background-color: white;
+    border-color: rgb(253, 0, 55);
+    color: rgb(253, 0, 55);
+}

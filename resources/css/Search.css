@@ -1,0 +1,260 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1b1b1b; 
+  color: #f0f0f0; 
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #333333;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #f0f0f0; 
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.favorite {
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
+
+.background_image {
+  width: 100vw;
+  height: 100vh; 
+  object-fit: cover; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  z-index: -1; 
+  transition: opacity 0.5s ease;
+}
+
+
+.search input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #555555;
+  border-radius: 5px;
+  background-color: #2b2b2b;
+  color: #f0f0f0;
+}
+
+.song-list-container {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.song-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.song-item {
+  background-color: #2a2a2a; 
+  border: 1px solid #444444;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.song-item span {
+  flex-grow: 1;
+  padding-right: 10px;
+  color: #e0e0e0; 
+}
+
+.song-item button {
+  background-color: #6c63ff; 
+  color: #f0f0f0;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.song-item button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+  z-index: 0;
+}
+
+.song-item button:hover::before {
+  width: 250%;
+  height: 250%;
+}
+
+.song-item button:hover {
+  background-color: #5545cc; 
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.song-item button:active {
+  transform: scale(0.95);
+  background-color: #483d8b; 
+}
+
+.song-item button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.5);
+}
+
+#songNameInput, #songUrlInput {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #555555;
+  border-radius: 5px;
+  width: calc(50% - 20px);
+  background-color: #2b2b2b;
+  color: #f0f0f0;
+}
+
+button {
+  background-color: #6c63ff;
+  color: #f0f0f0;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #5545cc;
+}
+
+
+.player-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: #333333;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+#progressBar {
+  flex-grow: 1;
+  margin: 0 10px;
+  background-color: #6c63ff; 
+}
+
+#volumeControl {
+  width: 70px;
+}
+
+@keyframes highlightRed {
+  0% {
+    color: inherit;
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: inherit;
+  }
+}
+
+.highlight-red {
+  animation: highlightRed 1s ease-in-out;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filters select {
+  padding: 10px;
+  border: 1px solid #555555;
+  border-radius: 5px;
+  background-color: #2b2b2b;
+  color: #f0f0f0;
+}
+
+.filters select:focus {
+  outline: none;
+  border-color: #6c63ff;
+}
+
+.search input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #555555;
+  border-radius: 5px;
+  background-color: #2b2b2b;
+  color: #f0f0f0;
+}
+
+.song-list-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.song-list {
+  list-style: none;
+  padding: 0;
+}
+
+.song-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2a2a2a;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.song-item span {
+  flex: 1;
+}
+
+.song-item button {
+  margin-left: 5px;
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.song-item button:hover {
+  background: #5545cc;
+}
+
